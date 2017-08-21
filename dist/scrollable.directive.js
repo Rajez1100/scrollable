@@ -54,7 +54,7 @@ var NguiScrollableDirective = (function () {
         // detect the current environment
         var parentElStyle = window.getComputedStyle(parentEl);
         var scrollContainerEl = parentElStyle.overflow === 'auto' ?
-            parentEl : document.body;
+            parentEl : document.scrollingElement || document.documentElement;
         var currentScrollTop = scrollContainerEl.scrollTop;
         var currentScrollLeft = scrollContainerEl.scrollLeft;
         // determine targetOffsetTop(or Left);
